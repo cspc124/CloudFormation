@@ -59,9 +59,12 @@ Resources:
       Tags:
       - Key: 'MISPCF'
         Value: 'MISPCFInstance'
-        
+ 
+ #Point to existing static IP (Elastic IP)#
   AssociateControlPort:
     Type: AWS::EC2::EIPAssociation
     Properties:
+    #Allocation ID located at EC2 -> Elastic IP #
       AllocationId: 'eipalloc-0eec026687d4d361c'
+      
       InstanceId: !Ref EC2Example        
